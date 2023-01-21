@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 <style>
- 
-li {
-  border-right: 1px solid #bbb;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-li:last-child {
-  border-right: none;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
 }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+<style>
+ 
 
 
 
@@ -35,13 +50,12 @@ h1    {
 </head>
 
 <body>
-    <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">About</a></li>
-</ul>
-
+<div class="dropdown">
+  <span>Mouse over me</span>
+  <div class="dropdown-content">
+    <p>Hello World!</p>
+  </div>
+</div>
 
     <h1>Mod Website Fogs</h1>
     
